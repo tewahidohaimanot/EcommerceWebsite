@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup design</title>
+    <link rel="stylesheet" href="css/order.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body class="card1">
+          <hr/>  
+   
+    <div.class="contactus">
+        </div>
+    <div class="box">
+        <div class="contact form">
+            <form name="coment form"method"post">
+    
+                <label>FULL-NAME</label></br>
+                <input type="text" name="FULL-NAME"></br>   
+                <label>EMAIL</label></br>
+                <input type="ADDRESS" name="NEAR ADDRESS"></br>
+                <label>ADDRESS</label></br>             
+                <input type="email" name="email"></br>
+               
+                <script>
+                    function calculateAmount (val){
+                     var total = val * 20.78;
+                      var divobj=document.getElementById('total amount');
+                     divobj.value = total;
+                    }
+                    </script>
+                    
+                <label>COMMENT</label></br>
+                <textarea name="comment"></textarea></br>          
+                <h1>Auto calculate price</h1>
+                <form name="frm-pin" method="post" action="pin-order.html">
+                 <input type="hidden" name="mode" value="PinRequest"/>
+                 <label1 class="w3-text-green"><b>Number of Pin</b></label1>
+                 <select name="tot_pin_requested" onchange="calculateAmount(this.value) ">
+                 <option value="" disabled selected>choose your option</option>
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+                 <option value="7">7</option>
+                 <option value="8">8</option>
+                 <option value="9">9</option>
+                 <option value="10">10</option>
+                 </select>
+                 <label1><b>Total Amount</b></label1>
+                 <input class="w3-input w3-border" name="total amount" id="total amount" type="text" readonly>
+                </form>
+            </form>
+ <div class="container">
+     <button type="submit" class="btn" onclick="openpopup()">submit</button>
+     <div class="popup" id="popup">
+     <img src="C:\Users\jp\Desktop\source\download (7).jpeg" alt="">
+     <br>
+     <h2>Thank you!</h2><br>
+     <p>your order has been succesfully submitted.Thanks!</p> <br>
+     <button type="button" onclick="closepopup()">OK</button>
+ </div>
+</div>
+<script>
+ let popup=document.getElementById("popup");
+ function openpopup(){
+    popup.classList.add("open-popup");
+
+ }
+ function closepopup(){
+    popup.classList.remove("open-popup");
+    
+ }
+</script>
+</body>
+</html>
